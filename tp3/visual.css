@@ -1,0 +1,22 @@
+.bloque {
+	display:block;
+	margin: 20px 10px;
+}
+
+.linea {
+	display:inline;
+	margin: 50px 10px;
+}
+
+.centrar {
+	text-align: center;
+}
+
+.ib {
+	display:inline-block;
+}
+
+.coment {
+	display:block;
+	width: 450px;
+}

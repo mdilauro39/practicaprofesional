@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>formulario</title>
+<link rel="stylesheet" href="visual.css"
+</head>
+<body>
+<h1 class="centrar">Reserva de Pasajes</h1>
+<section>
+<form name="miformulario" method="get" onsubmit="return validacion()">
+<div class="bloque">
+<label>Nombre</label>
+<input type="text" name="nombre"/>
+</div>
+<div class="bloque">
+<label>Apellido</label>
+<input type="text" name = "apellido"/>
+</div>
+<label>Documento(Tipo):</label>
+<div class="linea">
+<select name="tipo documento">
+   <option value="1">Libreta de Enrolamiento</option> 
+   <option value="2">DNI</option> 
+</select>
+<label>Numero:</label>
+<input type="text" name = "numero" id="dni">
+
+<label>Telefono</label>
+<input type="text" name ="telefono"/>
+</div>
+<div class="bloque">
+<label>Fecha de Nacimiento:</label>
+<input type="date" name = "fechanacimiento">
+</div>
+<div class="bloque">
+<label>Fecha de la Reserva</label>
+<input type="date" name = "fechareserva">
+</div>
+<div class="bloque">
+<label>Observaciones</label>
+</div>
+<textarea class = "coment" name="observaciones" rows="10" cols="50">
+</textarea>
+<button type="button" onclick="validacion()">Establecer Reserva</button>
+<input type="Reset" value="Borrar todo">
+<p id="name"></p>
+<p id="last"></p>
+<p id="dnix"></p>
+<p id="numerox"></p>
+<p id="telefonox"></p>
+<p id="naci"></p>
+<p id="reser"></p>
+<script>
+function validacion() {
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("dni").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(x) || x < 1000000) {
+    text = "completar dni";
+  } else {
+    text = "correcto";
+  }
+  document.getElementById("dnix").innerHTML = text;
+}
+</script>
+</form>
+</section> 
+</body>
+
+</html> 
